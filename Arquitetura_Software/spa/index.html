@@ -1,0 +1,27 @@
+<html>
+<script src="https://unpkg.com/vue@2"></script>
+<body>
+
+<h3>Uma Simples SPA</h3>
+
+<div id="ui">
+  Temperatura: {{ temperatura }}
+  <p><button v-on:click="incTemperatura">Incrementa</button></p>
+</div>
+
+<script>
+var model = new Vue({
+  el: '#ui',
+  data: {
+    temperatura: 30
+  },
+  methods: {
+    incTemperatura: function () {
+      this.temperatura++;
+    }
+  }
+})
+</script>
+
+</body>
+</html>
